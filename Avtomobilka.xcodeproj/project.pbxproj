@@ -7,18 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84BBC27D2A6E9B5B00BC3876 /* CarsListCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BBC27C2A6E9B5B00BC3876 /* CarsListCard.swift */; };
 		84E0E7522A6E765B006AAEAF /* AvtomobilkaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0E7512A6E765B006AAEAF /* AvtomobilkaApp.swift */; };
 		84E0E7542A6E765B006AAEAF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0E7532A6E765B006AAEAF /* ContentView.swift */; };
 		84E0E7562A6E765D006AAEAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E0E7552A6E765D006AAEAF /* Assets.xcassets */; };
 		84E0E7592A6E765D006AAEAF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E0E7582A6E765D006AAEAF /* Preview Assets.xcassets */; };
+		84E0E7642A6E87B4006AAEAF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0E7632A6E87B4006AAEAF /* NetworkManager.swift */; };
+		84E0E7672A6E87FA006AAEAF /* CarsListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0E7662A6E87FA006AAEAF /* CarsListItem.swift */; };
+		84E0E7692A6E891A006AAEAF /* CarImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0E7682A6E891A006AAEAF /* CarImages.swift */; };
+		84E0E76C2A6E91C3006AAEAF /* CarsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0E76B2A6E91C3006AAEAF /* CarsListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84BBC27C2A6E9B5B00BC3876 /* CarsListCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsListCard.swift; sourceTree = "<group>"; };
 		84E0E74E2A6E765B006AAEAF /* Avtomobilka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avtomobilka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E0E7512A6E765B006AAEAF /* AvtomobilkaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvtomobilkaApp.swift; sourceTree = "<group>"; };
 		84E0E7532A6E765B006AAEAF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		84E0E7552A6E765D006AAEAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84E0E7582A6E765D006AAEAF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		84E0E7632A6E87B4006AAEAF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		84E0E7662A6E87FA006AAEAF /* CarsListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsListItem.swift; sourceTree = "<group>"; };
+		84E0E7682A6E891A006AAEAF /* CarImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarImages.swift; sourceTree = "<group>"; };
+		84E0E76B2A6E91C3006AAEAF /* CarsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsListViewModel.swift; sourceTree = "<group>"; };
+		84E0E7712A6E98AF006AAEAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84BBC27B2A6E9B3B00BC3876 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84BBC27C2A6E9B5B00BC3876 /* CarsListCard.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		84E0E7452A6E765B006AAEAF = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +70,11 @@
 		84E0E7502A6E765B006AAEAF /* Avtomobilka */ = {
 			isa = PBXGroup;
 			children = (
+				84E0E7712A6E98AF006AAEAF /* Info.plist */,
+				84BBC27B2A6E9B3B00BC3876 /* Views */,
+				84E0E76A2A6E91AB006AAEAF /* ViewModels */,
+				84E0E7652A6E87BA006AAEAF /* Models */,
+				84E0E7612A6E878D006AAEAF /* Services */,
 				84E0E7512A6E765B006AAEAF /* AvtomobilkaApp.swift */,
 				84E0E7532A6E765B006AAEAF /* ContentView.swift */,
 				84E0E7552A6E765D006AAEAF /* Assets.xcassets */,
@@ -65,6 +89,39 @@
 				84E0E7582A6E765D006AAEAF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		84E0E7612A6E878D006AAEAF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				84E0E7622A6E879E006AAEAF /* Network */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		84E0E7622A6E879E006AAEAF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				84E0E7632A6E87B4006AAEAF /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		84E0E7652A6E87BA006AAEAF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				84E0E7662A6E87FA006AAEAF /* CarsListItem.swift */,
+				84E0E7682A6E891A006AAEAF /* CarImages.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		84E0E76A2A6E91AB006AAEAF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				84E0E76B2A6E91C3006AAEAF /* CarsListViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +194,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84E0E76C2A6E91C3006AAEAF /* CarsListViewModel.swift in Sources */,
+				84E0E7642A6E87B4006AAEAF /* NetworkManager.swift in Sources */,
+				84E0E7692A6E891A006AAEAF /* CarImages.swift in Sources */,
 				84E0E7542A6E765B006AAEAF /* ContentView.swift in Sources */,
+				84E0E7672A6E87FA006AAEAF /* CarsListItem.swift in Sources */,
+				84BBC27D2A6E9B5B00BC3876 /* CarsListCard.swift in Sources */,
 				84E0E7522A6E765B006AAEAF /* AvtomobilkaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,11 +331,12 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Avtomobilka/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Avtomobilka/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -281,9 +344,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nik-gribok.Avtomobilka";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -297,11 +363,12 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Avtomobilka/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Avtomobilka/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,9 +376,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nik-gribok.Avtomobilka";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

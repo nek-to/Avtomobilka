@@ -1,26 +1,27 @@
-//
-//  ContentView.swift
-//  Avtomobilka
-//
-//  Created by admin on 24.07.2023.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+	@ObservedObject var viewModel = CarsListViewModel()
+	
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+		ScrollView(.vertical) {
+				ForEach(viewModel.carsList, id: \.id) { car in
+					CarsListCard(image: car.images,
+									 brand: car.brandName,
+									 model: car.modelName,
+									 year: car.year,
+									 transmission: car.transmissionName)
+						.padding(.vertical, 5)
+			}
+		}
+		.onAppear {
+			viewModel.fetchCarsList()
+		}
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+	static var previews: some View {
+		ContentView()
+	}
 }

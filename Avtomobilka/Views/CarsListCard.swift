@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct CarsListCard: View {
-	var image: String
+	var image: [CarImages]
 	var brand: String
 	var model: String
 	var year: Int
@@ -9,49 +9,74 @@ struct CarsListCard: View {
 	
 	var body: some View {
 		VStack {
-			VStack {
-				AsyncImage(url: URL(string: image)) { image in
-					image
-						.resizable()
-						.scaledToFill()
-						.cornerRadius(15)
-						.padding(.all)
-				} placeholder: {
-					ProgressView()
+			ScrollView(.horizontal, showsIndicators: false) {
+				VStack {
+					LazyHGrid(rows: [GridItem(.flexible())]) {
+						ForEach(image, id: \.id) { imageUrl in
+							AsyncImage(url: URL(string: imageUrl.thumbnailUrl)) { image in
+								image
+									.resizable()
+									.cornerRadius(15)
+									.aspectRatio(contentMode: .fit)
+									.clipped()
+							} placeholder: {
+								ProgressView()
+							}
+						}
+					}
+				}
+				.frame(height: 250)
+				.padding(.all)
+			}
+			
+			HStack {
+				VStack(alignment: .leading) {
+					HStack {
+						Text("Бренд:")
+							.padding(.bottom, 3)
+							.foregroundColor(Color.gray)
+						
+						Text(brand)
+							.padding(.bottom, 3)
+					}
+					
+					HStack {
+						Text("Модель:")
+							.padding(.bottom, 3)
+							.foregroundColor(Color.gray)
+						
+						Text(model)
+							.padding(.bottom, 3)
+					}
 				}
 				
-				HStack {
-					VStack(alignment: .leading) {
-						Text("Бренд: \(brand)")
+				Spacer()
+				
+				VStack(alignment: .trailing) {
+					HStack {
+						Text("Год:")
 							.padding(.bottom, 3)
+							.foregroundColor(Color.gray)
 						
-						Text("Модель: \(model)")
+						Text(String(year))
 							.padding(.bottom, 3)
 					}
 					
-					Spacer()
-					
-					VStack(alignment: .trailing) {
-						Text("Год: \(String(year))")
+					HStack {
+						Text("КП:")
 							.padding(.bottom, 3)
+							.foregroundColor(Color.gray)
 						
-						Text("Трансмиссия: \(transmission)")
+						Text(transmission)
 							.padding(.bottom, 3)
 					}
 				}
-				.padding([.bottom, .horizontal])
 			}
+			.padding([.bottom, .horizontal])
 		}
 		.background(Color.white)
 		.cornerRadius(25)
-		.shadow(radius: 20)
+		.shadow(radius: 8)
 		.padding(.horizontal)
-	}
-}
-
-
-struct CarsListCard_Previews: PreviewProvider {
-	static var previews: some View {
-		CarsListCard(image: "http://am111.05.testing.place/uploads/user/37/auto/49/fc40ee0a0dbf97b2e504b2f48438a8ba_w500.jpg", brand: "Volkswagen", model: "Tiguan", year: 2018, transmission: "AT")
 	}
 }
