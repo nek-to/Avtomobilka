@@ -1,36 +1,34 @@
 import SwiftUI
 
 struct CarScreen: View {
-	var thumbnail: String
-	var avatar: String
-	var username: String
-	var email: String
-	var followers: Int
-	var autoCount: Int
-	var mainAuto: String
-	var aboutMe: String?
+	@ObservedObject var viewModel: CarViewModel
 	
-    var body: some View {
+	var body: some View {
 		VStack {
-			TopProfileView(thumbnail: thumbnail, avatar: avatar, followers: followers, autoCount: autoCount)
+			TopProfileView(
+				thumbnail: viewModel.car?.carInfo.images.first?.url ?? "",
+				avatar: viewModel.car?.user.avatar.url ?? "",
+				followers: viewModel.car?.carInfo.followersCount ?? 0,
+				autoCount: viewModel.car?.user.autoCount ?? 0
+			)
 			
 			VStack {
-				Text(username)
+				Text(viewModel.car?.user.username ?? "")
 					.font(.largeTitle)
 					.fontWeight(.bold)
 					.multilineTextAlignment(.center)
 				
-				Text(email)
+				Text(viewModel.car?.user.email ?? "")
 					.font(.callout)
 					.fontWeight(.thin)
 					.multilineTextAlignment(.center)
 					.foregroundColor(Color.gray)
 				
-				Text(mainAuto)
+				Text(viewModel.car?.user.mainAutoName ?? "")
 					.fontWeight(.bold)
 					.padding(.bottom)
 				
-				if let aboutMe {
+				if let aboutMe = viewModel.car?.user.about {
 					VStack {
 						Text("Обо мне:")
 							.padding(.bottom, 5)
@@ -42,15 +40,7 @@ struct CarScreen: View {
 					.padding(.horizontal)
 				}
 			}
-			
-			
+			Spacer()
 		}
-    }
-}
-
-struct CarScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        CarScreen(thumbnail: "http://am111.05.testing.place/uploads/user/31/auto/31/96361891be0582b6527e4dcd04f346f8_w500.jpg", avatar: "http://am111.05.testing.place/uploads/user/31/avatars/Lcc4gjvRVpJ8RT1A9p77ezRizZjA5FsxxTiwadgH.jpg",
-				  username: "rishe", email:"rishe@tester.avtomobilka.com", followers: 7, autoCount: 2, mainAuto: "BMW 3 серия", aboutMe: "Привет тебе, читатель! Я Alex Oldman!\nИскренне надеюсь, что у тебя все в порядке.\nПо крайней мере я тебе этого желаю!\nА если интересно, чем занимаюсь я, так вот информация!\n\nБудь здоров, счастлив! Если смогу быть чем-то полезен, добро пожаловать!")
-    }
+	}
 }

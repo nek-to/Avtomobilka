@@ -20,12 +20,14 @@ final class CarsListViewModel: ObservableObject {
 				switch completion {
 				case .failure(let error):
 					self?.error = error
+					print(error)
 				case .finished:
 					break
 				}
 			} receiveValue: { [weak self] carsListItem in
 				self?.carsList.append(contentsOf: carsListItem)
 				self?.isLoading = false
+				print("Loaded")
 			}
 			.store(in: &cancelable)
 	}
