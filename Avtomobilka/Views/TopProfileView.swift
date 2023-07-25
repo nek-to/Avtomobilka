@@ -12,14 +12,15 @@ struct TopProfileView: View {
 				AsyncImage(url: URL(string: thumbnail)) { image in
 					image
 						.resizable()
-						.scaledToFit()
+						.scaledToFill()
 						.edgesIgnoringSafeArea(.top)
 				} placeholder: {
 					ProgressView()
 				}
+				.frame(height: 120)
 				
 				AvatarView(avatar: avatar)
-					.offset(y: geometry.size.height * 0.14)
+					.offset(y: geometry.size.height * 0.2)
 				
 				HStack(alignment: .center) {
 					VStack {
