@@ -6,7 +6,7 @@ struct Post: Codable {
 	var likeCount: Int
 	var createdAt: String
 	var commentCount: Int
-	var postImage: String
+	var postImage: String?
 	var author: PostAuthor
 	
 	enum CodingKeys: String, CodingKey {

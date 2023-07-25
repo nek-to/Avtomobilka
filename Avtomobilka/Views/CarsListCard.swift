@@ -9,7 +9,7 @@ struct CarsListCard: View {
 	
 	var body: some View {
 		VStack {
-			ScrollView(.horizontal, showsIndicators: false) {
+			ScrollView(.horizontal) {
 				VStack {
 					LazyHGrid(rows: [GridItem(.flexible())]) {
 						ForEach(image, id: \.id) { imageUrl in

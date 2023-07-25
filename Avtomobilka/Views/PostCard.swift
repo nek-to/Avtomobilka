@@ -1,51 +1,61 @@
 import SwiftUI
 
 struct PostCard: View {
-	var image: String
-	var date: String
-	var postText: String
-	var likesCount: Int
-	var commentsCount: Int
-	
+    var image: String
+    var date: String
+    var postText: String
+    var likesCount: Int
+    var commentsCount: Int
+    
     var body: some View {
-		VStack {
-			VStack {
-				AsyncImage(url: URL(string: image)) { image in
-					image
-						.resizable()
-						.scaledToFill()
-				} placeholder: {
-					ProgressView()
-				}
-				.frame(height: 300)
-				
-				VStack {
-					Text(postText)
-						.font(.caption)
-						.fontWeight(.light)
-						.padding(/*@START_MENU_TOKEN@*/[.leading, .bottom, .trailing], 5.0/*@END_MENU_TOKEN@*/)
-					
-					HStack {
-						Text(date)
-							.foregroundColor(Color.black)
-						
-						Spacer()
-						
-						HStack {
-							Image(systemName: "heart")
-							Text(String(likesCount))
-						}
-						.padding(.horizontal)
-						
-						HStack {
-							Image(systemName: "message")
-							Text(String(commentsCount))
-						}
-					}
-					.padding(.horizontal)
-				}
-			}
-		}
+        VStack {
+            VStack {
+                if image != "" {
+                    AsyncImage(url: URL(string: image)) { image in
+                        image
+                            .resizable()
+                            .frame(height: 250)
+                            .scaledToFit()
+                            .cornerRadius(15)
+                    } placeholder: {
+                        ProgressView()
+                    }
+                    .padding(.horizontal)
+                    .padding(.top, 20)
+                }
+            }
+            
+            VStack(alignment: .leading) {
+                Text(postText)
+                    .font(.caption)
+                    .fontWeight(.light)
+                    .multilineTextAlignment(.leading)
+                    .padding([.horizontal, .vertical], 10)
+                
+                HStack {
+                    Text(date)
+                        .foregroundColor(Color.black)
+                    
+                    Spacer()
+                    
+                    HStack {
+                        Image(systemName: "heart")
+                        Text(String(likesCount))
+                    }
+                    .padding(.horizontal)
+                    
+                    HStack {
+                        Image(systemName: "message")
+                        Text(String(commentsCount))
+                    }
+                }
+                .padding([.bottom, .horizontal])
+            }
+        }
+        .background(Color.white)
+        .cornerRadius(20)
+        .shadow(radius: 8)
+        .padding(.all)
     }
 }
 
