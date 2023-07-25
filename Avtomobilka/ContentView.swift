@@ -2,20 +2,34 @@ import SwiftUI
 
 struct ContentView: View {
 	@ObservedObject var viewModel = CarsListViewModel()
+	@StateObject var carViewModel = CarViewModel()
+	
+	@State private var selectedCarId: Int?
 	
 	var body: some View {
-		ScrollView(.vertical) {
-			LazyVStack {
-				ForEach(viewModel.carsList, id: \.id) { car in
-					CarsListCard(image: car.images,
-								 brand: car.brandName,
-								 model: car.modelName,
-								 year: car.year,
-								 transmission: car.transmissionName)
-					.padding(.vertical, 5)
-					.onAppear {
-						if car.id == viewModel.carsList.last?.id {
-							viewModel.fetchMoreCarsInList()
+		NavigationStack {
+			ScrollView(.vertical) {
+				LazyVStack {
+					ForEach(viewModel.carsList, id: \.id) { car in
+						NavigationLink(
+							destination: CarScreen(viewModel: carViewModel)
+								.onAppear {
+									carViewModel.fetchCarInformation(car: car.id)
+								},
+							tag: car.id,
+							selection: $selectedCarId
+						) {
+							CarsListCard(image: car.images,
+										 brand: car.brandName,
+										 model: car.modelName,
+										 year: car.year,
+										 transmission: car.transmissionName)
+								.padding(.vertical, 5)
+						}
+						.onAppear {
+							if car.id == viewModel.carsList.last?.id {
+								viewModel.fetchMoreCarsInList()
+							}
 						}
 					}
 				}
@@ -26,9 +40,9 @@ struct ContentView: View {
 						.padding(.all)
 				}
 			}
-			.onAppear {
-				viewModel.fetchCarsList()
-			}
+		}
+		.onAppear {
+			viewModel.fetchCarsList()
 		}
 	}
 }
