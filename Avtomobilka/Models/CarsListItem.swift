@@ -12,7 +12,7 @@ struct CarsListItem: Codable {
 	var modelId: Int
 	var engineId: Int
 	var transmissionId: Int
-	var placeId: String
+	var placeId: String?
 	var name: String
 	var image: String
 	var thumbnail: String

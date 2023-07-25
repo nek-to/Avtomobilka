@@ -2,13 +2,20 @@ import Combine
 
 final class CarsListViewModel: ObservableObject {
 	@Published var carsList = [CarsListItem]()
-	
+	@Published var isLoading = false
 	@Published var error: Error?
-	
+	private var page = 1
+
 	private var cancelable = Set<AnyCancellable>()
 	
+	func fetchMoreCarsInList() {
+		page += 1
+		fetchCarsList()
+	}
+	
 	func fetchCarsList() {
-		NetworkManager.shared.getCarsList()
+		isLoading = true
+		NetworkManager.shared.getCarsList(for: page)
 			.sink { [weak self] completion in
 				switch completion {
 				case .failure(let error):
@@ -17,8 +24,8 @@ final class CarsListViewModel: ObservableObject {
 					break
 				}
 			} receiveValue: { [weak self] carsListItem in
-				self?.carsList = carsListItem
-				print(carsListItem)
+				self?.carsList.append(contentsOf: carsListItem)
+				self?.isLoading = false
 			}
 			.store(in: &cancelable)
 	}
