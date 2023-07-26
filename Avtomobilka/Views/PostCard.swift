@@ -25,32 +25,7 @@ struct PostCard: View {
                 }
             }
             
-            VStack(alignment: .leading) {
-                Text(postText)
-                    .font(.caption)
-                    .fontWeight(.light)
-                    .multilineTextAlignment(.leading)
-                    .padding([.horizontal, .vertical], 10)
-                
-                HStack {
-                    Text(date)
-                        .foregroundColor(Color.black)
-                    
-                    Spacer()
-                    
-                    HStack {
-                        Image(systemName: "heart")
-                        Text(String(likesCount))
-                    }
-                    .padding(.horizontal)
-                    
-                    HStack {
-                        Image(systemName: "message")
-                        Text(String(commentsCount))
-                    }
-                }
-                .padding([.bottom, .horizontal])
-            }
+			PostCardInfoView(postText: postText, date: date, likesCount: likesCount, commentsCount: commentsCount)
         }
         .background(Color.white)
         .cornerRadius(20)

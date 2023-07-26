@@ -1,20 +1,37 @@
-//
-//  PostCardInfoView.swift
-//  Avtomobilka
-//
-//  Created by admin on 26.07.2023.
-//
-
 import SwiftUI
 
 struct PostCardInfoView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct PostCardInfoView_Previews: PreviewProvider {
-    static var previews: some View {
-        PostCardInfoView()
-    }
+	var postText: String
+	var date: String
+	var likesCount: Int
+	var commentsCount: Int
+	
+	var body: some View {
+		VStack(alignment: .leading) {
+			Text(postText)
+				.font(.caption)
+				.fontWeight(.light)
+				.multilineTextAlignment(.leading)
+				.padding([.horizontal, .vertical], 10)
+			
+			HStack {
+				Text(date)
+					.foregroundColor(Color.black)
+				
+				Spacer()
+				
+				HStack {
+					Image(systemName: "heart")
+					Text(String(likesCount))
+				}
+				.padding(.horizontal)
+				
+				HStack {
+					Image(systemName: "message")
+					Text(String(commentsCount))
+				}
+			}
+			.padding([.bottom, .horizontal])
+		}
+	}
 }
