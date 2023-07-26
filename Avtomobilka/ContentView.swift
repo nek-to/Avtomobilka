@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
-	@ObservedObject var viewModel = CarsListViewModel()
+	@ObservedObject var carsListViewModel = CarsListViewModel()
     @StateObject var carViewModel = CarViewModel()
 	@StateObject var postViewModel = PostCarViewModel()
 	
@@ -15,9 +15,9 @@ struct ContentView: View {
             
 			ScrollView(.vertical) {
 				LazyVStack {
-					ForEach(viewModel.carsList, id: \.id) { car in
+					ForEach(carsListViewModel.carsList, id: \.id) { car in
 						NavigationLink(
-							destination: CarScreen(viewModel: carViewModel, postsViewModel: postViewModel)
+							destination: CarScreen(carViewModel: carViewModel, postsViewModel: postViewModel)
 								.onAppear {
 									carViewModel.fetchCarInformation(car: car.id)
                                     postViewModel.fetchCarPostsInformation(car: car.id)
@@ -33,14 +33,14 @@ struct ContentView: View {
 								.padding(.vertical, 5)
 						}
 						.onAppear {
-							if car.id == viewModel.carsList.last?.id {
-								viewModel.fetchMoreCarsInList()
+							if car.id == carsListViewModel.carsList.last?.id {
+								carsListViewModel.fetchMoreCarsInList()
 							}
 						}
 					}
 				}
 				
-				if viewModel.isLoading {
+				if carsListViewModel.isLoading {
 					ProgressView()
 						.progressViewStyle(.circular)
 						.padding(.all)
@@ -48,7 +48,7 @@ struct ContentView: View {
 			}
 		}
 		.onAppear {
-			viewModel.fetchCarsList()
+			carsListViewModel.fetchCarsList()
 		}
 	}
 }
