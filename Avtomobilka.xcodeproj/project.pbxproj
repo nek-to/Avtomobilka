@@ -20,6 +20,12 @@
 		848644B02A6FF53A005CFC48 /* CarInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848644AF2A6FF53A005CFC48 /* CarInfo.swift */; };
 		848644B22A6FF78A005CFC48 /* CarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848644B12A6FF78A005CFC48 /* CarViewModel.swift */; };
 		84BBC27D2A6E9B5B00BC3876 /* CarsListCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BBC27C2A6E9B5B00BC3876 /* CarsListCard.swift */; };
+		84C02A4E2A710787003E441A /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C02A4D2A710787003E441A /* Formatter.swift */; };
+		84C02A502A71473D003E441A /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C02A4F2A71473D003E441A /* AvatarView.swift */; };
+		84C02A522A7147CD003E441A /* AccountStatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C02A512A7147CD003E441A /* AccountStatisticsView.swift */; };
+		84C02A542A714879003E441A /* CarListCardInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C02A532A714879003E441A /* CarListCardInfoView.swift */; };
+		84C02A562A7148DB003E441A /* PostCardInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C02A552A7148DB003E441A /* PostCardInfoView.swift */; };
+		84C02A582A71491B003E441A /* StatisticsItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C02A572A71491B003E441A /* StatisticsItems.swift */; };
 		84E0E7522A6E765B006AAEAF /* AvtomobilkaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0E7512A6E765B006AAEAF /* AvtomobilkaApp.swift */; };
 		84E0E7542A6E765B006AAEAF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0E7532A6E765B006AAEAF /* ContentView.swift */; };
 		84E0E7562A6E765D006AAEAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E0E7552A6E765D006AAEAF /* Assets.xcassets */; };
@@ -44,6 +50,12 @@
 		848644AF2A6FF53A005CFC48 /* CarInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInfo.swift; sourceTree = "<group>"; };
 		848644B12A6FF78A005CFC48 /* CarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarViewModel.swift; sourceTree = "<group>"; };
 		84BBC27C2A6E9B5B00BC3876 /* CarsListCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsListCard.swift; sourceTree = "<group>"; };
+		84C02A4D2A710787003E441A /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		84C02A4F2A71473D003E441A /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		84C02A512A7147CD003E441A /* AccountStatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountStatisticsView.swift; sourceTree = "<group>"; };
+		84C02A532A714879003E441A /* CarListCardInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListCardInfoView.swift; sourceTree = "<group>"; };
+		84C02A552A7148DB003E441A /* PostCardInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardInfoView.swift; sourceTree = "<group>"; };
+		84C02A572A71491B003E441A /* StatisticsItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsItems.swift; sourceTree = "<group>"; };
 		84E0E74E2A6E765B006AAEAF /* Avtomobilka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avtomobilka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E0E7512A6E765B006AAEAF /* AvtomobilkaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvtomobilkaApp.swift; sourceTree = "<group>"; };
 		84E0E7532A6E765B006AAEAF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,8 +116,21 @@
 				848644982A6FC0CA005CFC48 /* CarScreen.swift */,
 				8486449C2A6FD425005CFC48 /* PostCard.swift */,
 				0BCFB49F2A70582C00FCA9EA /* TopProfileView.swift */,
+				84C02A4F2A71473D003E441A /* AvatarView.swift */,
+				84C02A512A7147CD003E441A /* AccountStatisticsView.swift */,
+				84C02A532A714879003E441A /* CarListCardInfoView.swift */,
+				84C02A552A7148DB003E441A /* PostCardInfoView.swift */,
+				84C02A572A71491B003E441A /* StatisticsItems.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		84C02A4C2A710773003E441A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				84C02A4D2A710787003E441A /* Formatter.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		84E0E7452A6E765B006AAEAF = {
@@ -151,6 +176,7 @@
 		84E0E7612A6E878D006AAEAF /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				84C02A4C2A710773003E441A /* Common */,
 				84E0E7622A6E879E006AAEAF /* Network */,
 			);
 			path = Services;
@@ -254,21 +280,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84C02A562A7148DB003E441A /* PostCardInfoView.swift in Sources */,
 				848644992A6FC0CA005CFC48 /* CarScreen.swift in Sources */,
 				84E0E76C2A6E91C3006AAEAF /* CarsListViewModel.swift in Sources */,
+				84C02A4E2A710787003E441A /* Formatter.swift in Sources */,
+				84C02A582A71491B003E441A /* StatisticsItems.swift in Sources */,
 				848644B22A6FF78A005CFC48 /* CarViewModel.swift in Sources */,
 				84E0E7642A6E87B4006AAEAF /* NetworkManager.swift in Sources */,
+				84C02A522A7147CD003E441A /* AccountStatisticsView.swift in Sources */,
 				84E0E7692A6E891A006AAEAF /* CarImages.swift in Sources */,
 				848644A72A6FDD75005CFC48 /* PostAuthor.swift in Sources */,
 				848644A52A6FDC98005CFC48 /* Post.swift in Sources */,
 				84E0E7542A6E765B006AAEAF /* ContentView.swift in Sources */,
 				84E0E7672A6E87FA006AAEAF /* CarsListItem.swift in Sources */,
 				848644A92A6FDE1F005CFC48 /* AuthorAvatar.swift in Sources */,
+				84C02A542A714879003E441A /* CarListCardInfoView.swift in Sources */,
 				848644A12A6FDB97005CFC48 /* PostsForCar.swift in Sources */,
 				84BBC27D2A6E9B5B00BC3876 /* CarsListCard.swift in Sources */,
 				848644AE2A6FF3C1005CFC48 /* Car.swift in Sources */,
 				0BCFB4A02A70582C00FCA9EA /* TopProfileView.swift in Sources */,
 				848644A32A6FDBE3005CFC48 /* CarUser.swift in Sources */,
+				84C02A502A71473D003E441A /* AvatarView.swift in Sources */,
 				84E0E7522A6E765B006AAEAF /* AvtomobilkaApp.swift in Sources */,
 				8486449D2A6FD425005CFC48 /* PostCard.swift in Sources */,
 				848644B02A6FF53A005CFC48 /* CarInfo.swift in Sources */,
