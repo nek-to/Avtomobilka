@@ -14,6 +14,7 @@ struct CarScreen: View {
 			)
 			
 			StatisticsItems(carViewModel: carViewModel)
+                .offset(y:30)
 			
 			LazyVStack {
 				if let posts = postsViewModel.carPost {

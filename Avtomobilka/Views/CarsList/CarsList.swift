@@ -9,7 +9,7 @@ struct ContentView: View {
 	
 	var body: some View {
 		NavigationStack {
-            Text("Avtomobilka")
+            Text("Автомобилка")
                 .font(.title)
                 .fontWeight(.bold)
             

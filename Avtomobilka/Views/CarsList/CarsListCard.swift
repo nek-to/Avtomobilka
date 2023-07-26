@@ -12,17 +12,19 @@ struct CarsListCard: View {
 			ScrollView(.horizontal) {
 				VStack {
 					LazyHGrid(rows: [GridItem(.flexible())]) {
-						ForEach(image, id: \.id) { imageUrl in
-							AsyncImage(url: URL(string: imageUrl.thumbnailUrl)) { image in
-								image
-									.resizable()
-									.cornerRadius(15)
-									.aspectRatio(contentMode: .fit)
-									.clipped()
-							} placeholder: {
-								ProgressView()
-							}
-						}
+                        ForEach(image, id: \.id) { imageUrl in
+                            HStack {
+                                AsyncImage(url: URL(string: imageUrl.thumbnailUrl)) { image in
+                                    image
+                                        .resizable()
+                                        .cornerRadius(15)
+                                        .aspectRatio(contentMode: .fit)
+                                        .clipped()
+                                } placeholder: {
+                                    ProgressView()
+                                }
+                            }
+                        }
 					}
 				}
 				.frame(height: 250)

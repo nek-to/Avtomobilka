@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BAC0E6B2A71B032008299F5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BAC0E6A2A71B032008299F5 /* Launch Screen.storyboard */; };
 		0BCFB4A02A70582C00FCA9EA /* TopProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCFB49F2A70582C00FCA9EA /* TopProfileView.swift */; };
 		848644992A6FC0CA005CFC48 /* CarScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848644982A6FC0CA005CFC48 /* CarScreen.swift */; };
 		8486449D2A6FD425005CFC48 /* PostCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8486449C2A6FD425005CFC48 /* PostCard.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BAC0E6A2A71B032008299F5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		0BCFB49F2A70582C00FCA9EA /* TopProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopProfileView.swift; sourceTree = "<group>"; };
 		848644982A6FC0CA005CFC48 /* CarScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarScreen.swift; sourceTree = "<group>"; };
 		8486449C2A6FD425005CFC48 /* PostCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCard.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 			children = (
 				84E0E7712A6E98AF006AAEAF /* Info.plist */,
 				84E0E7512A6E765B006AAEAF /* AvtomobilkaApp.swift */,
+				0BAC0E6A2A71B032008299F5 /* Launch Screen.storyboard */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BAC0E6B2A71B032008299F5 /* Launch Screen.storyboard in Resources */,
 				84E0E7592A6E765D006AAEAF /* Preview Assets.xcassets in Resources */,
 				84E0E7562A6E765D006AAEAF /* Assets.xcassets in Resources */,
 			);
@@ -465,15 +469,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Avtomobilka/Preview Content\"";
-				DEVELOPMENT_TEAM = 2RCVAE2RNC;
+				DEVELOPMENT_TEAM = W7V846WLMV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Avtomobilka/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -498,15 +504,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Avtomobilka/Preview Content\"";
-				DEVELOPMENT_TEAM = 2RCVAE2RNC;
+				DEVELOPMENT_TEAM = W7V846WLMV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Avtomobilka/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

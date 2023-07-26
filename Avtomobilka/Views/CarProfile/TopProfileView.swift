@@ -13,21 +13,22 @@ struct TopProfileView: View {
 					image
 						.resizable()
 						.scaledToFill()
+                        .frame(height: 250)
 				} placeholder: {
 					ProgressView()
 				}
 				.cornerRadius(20)
-				.frame(height: 100)
 				.padding(.all)
 				
 				AvatarView(avatar: avatar)
-					.offset(y: 135)
+					.offset(y: 120)
 				
 				AccountStatisticsView(followers: followers, autoCount: autoCount)
 					.padding(.top, 10)
 			}
 		}
-		.frame(height: 340)
+        .padding(.bottom, 30)
+//		.frame(height: 340)
 	}
 }
 
