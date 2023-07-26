@@ -27,7 +27,7 @@
 		84C02A562A7148DB003E441A /* PostCardInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C02A552A7148DB003E441A /* PostCardInfoView.swift */; };
 		84C02A582A71491B003E441A /* StatisticsItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C02A572A71491B003E441A /* StatisticsItems.swift */; };
 		84E0E7522A6E765B006AAEAF /* AvtomobilkaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0E7512A6E765B006AAEAF /* AvtomobilkaApp.swift */; };
-		84E0E7542A6E765B006AAEAF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0E7532A6E765B006AAEAF /* ContentView.swift */; };
+		84E0E7542A6E765B006AAEAF /* CarsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0E7532A6E765B006AAEAF /* CarsList.swift */; };
 		84E0E7562A6E765D006AAEAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E0E7552A6E765D006AAEAF /* Assets.xcassets */; };
 		84E0E7592A6E765D006AAEAF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E0E7582A6E765D006AAEAF /* Preview Assets.xcassets */; };
 		84E0E7642A6E87B4006AAEAF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0E7632A6E87B4006AAEAF /* NetworkManager.swift */; };
@@ -58,7 +58,7 @@
 		84C02A572A71491B003E441A /* StatisticsItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsItems.swift; sourceTree = "<group>"; };
 		84E0E74E2A6E765B006AAEAF /* Avtomobilka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avtomobilka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E0E7512A6E765B006AAEAF /* AvtomobilkaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvtomobilkaApp.swift; sourceTree = "<group>"; };
-		84E0E7532A6E765B006AAEAF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		84E0E7532A6E765B006AAEAF /* CarsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsList.swift; sourceTree = "<group>"; };
 		84E0E7552A6E765D006AAEAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84E0E7582A6E765D006AAEAF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		84E0E7632A6E87B4006AAEAF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -112,15 +112,8 @@
 		84BBC27B2A6E9B3B00BC3876 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				84BBC27C2A6E9B5B00BC3876 /* CarsListCard.swift */,
-				848644982A6FC0CA005CFC48 /* CarScreen.swift */,
-				8486449C2A6FD425005CFC48 /* PostCard.swift */,
-				0BCFB49F2A70582C00FCA9EA /* TopProfileView.swift */,
-				84C02A4F2A71473D003E441A /* AvatarView.swift */,
-				84C02A512A7147CD003E441A /* AccountStatisticsView.swift */,
-				84C02A532A714879003E441A /* CarListCardInfoView.swift */,
-				84C02A552A7148DB003E441A /* PostCardInfoView.swift */,
-				84C02A572A71491B003E441A /* StatisticsItems.swift */,
+				84C02A5A2A7165DC003E441A /* CarProfile */,
+				84C02A592A716541003E441A /* CarsList */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -131,6 +124,47 @@
 				84C02A4D2A710787003E441A /* Formatter.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		84C02A592A716541003E441A /* CarsList */ = {
+			isa = PBXGroup;
+			children = (
+				84E0E7532A6E765B006AAEAF /* CarsList.swift */,
+				84BBC27C2A6E9B5B00BC3876 /* CarsListCard.swift */,
+				84C02A532A714879003E441A /* CarListCardInfoView.swift */,
+			);
+			path = CarsList;
+			sourceTree = "<group>";
+		};
+		84C02A5A2A7165DC003E441A /* CarProfile */ = {
+			isa = PBXGroup;
+			children = (
+				84C02A5B2A716605003E441A /* Post */,
+				848644982A6FC0CA005CFC48 /* CarScreen.swift */,
+				0BCFB49F2A70582C00FCA9EA /* TopProfileView.swift */,
+				84C02A4F2A71473D003E441A /* AvatarView.swift */,
+				84C02A512A7147CD003E441A /* AccountStatisticsView.swift */,
+				84C02A572A71491B003E441A /* StatisticsItems.swift */,
+			);
+			path = CarProfile;
+			sourceTree = "<group>";
+		};
+		84C02A5B2A716605003E441A /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				8486449C2A6FD425005CFC48 /* PostCard.swift */,
+				84C02A552A7148DB003E441A /* PostCardInfoView.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		84C02A5C2A71667C003E441A /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				84E0E7712A6E98AF006AAEAF /* Info.plist */,
+				84E0E7512A6E765B006AAEAF /* AvtomobilkaApp.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 		84E0E7452A6E765B006AAEAF = {
@@ -152,13 +186,11 @@
 		84E0E7502A6E765B006AAEAF /* Avtomobilka */ = {
 			isa = PBXGroup;
 			children = (
-				84E0E7712A6E98AF006AAEAF /* Info.plist */,
+				84C02A5C2A71667C003E441A /* Application */,
 				84BBC27B2A6E9B3B00BC3876 /* Views */,
 				84E0E76A2A6E91AB006AAEAF /* ViewModels */,
 				84E0E7652A6E87BA006AAEAF /* Models */,
 				84E0E7612A6E878D006AAEAF /* Services */,
-				84E0E7512A6E765B006AAEAF /* AvtomobilkaApp.swift */,
-				84E0E7532A6E765B006AAEAF /* ContentView.swift */,
 				84E0E7552A6E765D006AAEAF /* Assets.xcassets */,
 				84E0E7572A6E765D006AAEAF /* Preview Content */,
 			);
@@ -291,7 +323,7 @@
 				84E0E7692A6E891A006AAEAF /* CarImages.swift in Sources */,
 				848644A72A6FDD75005CFC48 /* PostAuthor.swift in Sources */,
 				848644A52A6FDC98005CFC48 /* Post.swift in Sources */,
-				84E0E7542A6E765B006AAEAF /* ContentView.swift in Sources */,
+				84E0E7542A6E765B006AAEAF /* CarsList.swift in Sources */,
 				84E0E7672A6E87FA006AAEAF /* CarsListItem.swift in Sources */,
 				848644A92A6FDE1F005CFC48 /* AuthorAvatar.swift in Sources */,
 				84C02A542A714879003E441A /* CarListCardInfoView.swift in Sources */,
@@ -433,10 +465,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Avtomobilka/Preview Content\"";
-				DEVELOPMENT_TEAM = W7V846WLMV;
+				DEVELOPMENT_TEAM = 2RCVAE2RNC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Avtomobilka/Info.plist;
+				INFOPLIST_FILE = Avtomobilka/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -466,10 +498,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Avtomobilka/Preview Content\"";
-				DEVELOPMENT_TEAM = W7V846WLMV;
+				DEVELOPMENT_TEAM = 2RCVAE2RNC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Avtomobilka/Info.plist;
+				INFOPLIST_FILE = Avtomobilka/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
