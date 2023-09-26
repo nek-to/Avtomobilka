@@ -2,7 +2,7 @@
 Developed a mini application consisting of two screens and displaying content from the API.
 The design and layout were developed independently. The idea and design were inspired by social networks (Vk, Instagram, etc.).
 
-## Sunnary
+## Summary
 The technology stack used to create the application was SwiftUI + Combine + MVVM.
 
 ## Screenshots
